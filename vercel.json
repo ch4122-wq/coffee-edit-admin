@@ -1,0 +1,56 @@
+{
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/app?path=/"
+    },
+    {
+      "source": "/users",
+      "destination": "/api/app?path=/users"
+    },
+    {
+      "source": "/media",
+      "destination": "/api/app?path=/media"
+    },
+    {
+      "source": "/ratings",
+      "destination": "/api/app?path=/ratings"
+    },
+    {
+      "source": "/auth/callback",
+      "destination": "/api/app?path=/auth/callback"
+    },
+    {
+      "source": "/auth/signout",
+      "destination": "/api/app?path=/auth/signout"
+    },
+    {
+      "source": "/api/snapshot",
+      "destination": "/api/app?path=/api/snapshot"
+    },
+    {
+      "source": "/api/mutate",
+      "destination": "/api/app?path=/api/mutate"
+    },
+    {
+      "source": "/api/image",
+      "destination": "/api/app?path=/api/image"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        }
+      ]
+    }
+  ]
+}
