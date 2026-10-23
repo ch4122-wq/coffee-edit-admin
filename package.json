@@ -1,0 +1,1 @@
+{"name":"coffee-edit-admin","private":true,"type":"module","scripts":{"build":"node --check api/app.js && mkdir -p public && cp placeholder.txt public/placeholder.txt","test":"node --test test.mjs"},"dependencies":{"@supabase/ssr":"^0.7.0","@supabase/supabase-js":"^2.57.0","cookie":"^1.0.2"}}
